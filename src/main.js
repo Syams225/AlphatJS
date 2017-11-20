@@ -134,9 +134,9 @@ class LINE extends Command {
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
         this.command('.speed', this.getSpeed.bind(this));
         this.command('.kernel', this.checkKernel.bind(this));
-        this.command(`kick ${payload}`, this.OnOff.bind(this));
-        this.command(`cancel ${payload}`, this.OnOff.bind(this));
-        this.command(`qrp ${payload}`, this.OnOff.bind(this));
+        this.command(`.kick ${payload}`, this.OnOff.bind(this));
+        this.command(`.cancel ${payload}`, this.OnOff.bind(this));
+        this.command(`.qrp ${payload}`, this.OnOff.bind(this));
         this.command(`.kickall ${payload}`,this.kickAll.bind(this));
         this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
         this.command(`.set`,this.setReader.bind(this));
@@ -150,9 +150,9 @@ class LINE extends Command {
         this.command(`.spam ${payload}`,this.spamGroup.bind(this));
         this.command(`.creator`,this.creator.bind(this));
 
-        this.command(`pap ${payload}`,this.searchLocalImage.bind(this));
+        this.command(`.pap ${payload}`,this.searchLocalImage.bind(this));
         this.command(`.upload ${payload}`,this.prepareUpload.bind(this));
-        this.command(`vn ${payload}`,this.vn.bind(this));
+        this.command(`.vn ${payload}`,this.vn.bind(this));
 
         if(messages.contentType == 13) {
             messages.contentType = 0;
